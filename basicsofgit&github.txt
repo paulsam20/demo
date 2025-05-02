@@ -1,0 +1,89 @@
+Git:
+
+version control
+collaboration on code
+track of changes in our code
+
+GitHub:
+
+web-based Git repository hosting service 
+alternative 
+bitbucket
+gitbucket
+repository (storage)
+commit changes (saving)
+commit message is a must !
+-
+installation of git
+cmd - git
+setting user name and email in our local system 
+user name - git config --global user.name "paulsam20"
+email - git config --global user.email "paulinesamyuktha.26it@licet.ac.in" 
+-
+Commands:
+
+Create a repo in the GitHub and then clone it to the local system:
+
+loading the repository to local system - git clone link
+change the directory - cd demo
+status of file - git status 
+U - untracked 
+(untracked - because not yet moved to the git copy folder)
+git add test2.txt  (add ->staging area- preparing changes before committing them to the repository)
+status - git status 
+A - added
+local git folder - git commit -m "Test2.txt file added"
+Pushing to GitHub repo web - git push origin main
+origin (first link)
+(any modifications-add-commit-push)
+getting the new contents created in web GitHub repo - git pull
+
+Create a folder in local system and then add it to the repo:
+
+create your folder and files
+since it is not a git repo we need to create it so use - git init
+we will get the .git bridge folder!
+staging all the files even 100 files, use the command - git add .
+git commit -m "index and css"
+now push but we don't having origin and main.
+go to GitHub create a new repository 
+connect the created repo to local system 
+git remote add origin link
+connected!
+git branch
+*master 
+(which is main ! but git has updated to master)
+so for pushing you could use two alternatives
+which is - git push origin master 
+else change the branch name, for changing the branch name use the command - git branch -M main
+and then use - git push origin main
+
+Branching Concept:
+main branch has important codes
+sub branches are created for working individually assigned work and then committing then to the main branch.
+
+viewing your current branch - git branch 
+creating new branch-    git branch branchname
+lisiting all the branches - git branch -a
+create a new branch in the web GitHub
+now give the command - git pull 
+check again, list all the branches 
+move or open to your new created branch -
+#git checkout branchname
+git checkout gitbranch1
+create a file and then add commit and push.
+changes will be seen in secondary branch but not in main branch, we will have to move the changes to the main branch for that we use -
+git diff gitbranch1 
+(to see the differences)
+merging main and create sub branche
+#git merge branchname
+git merge gitbranch1 
+push now 
+git push origin main
+clear - clearing all commands
+git log - show all commit changes 
+
+Pull requests:
+feature by GitHub
+for high level projects we will not have access to main branch 
+so we will give a notification which is a pull request for your lead, to check the changes made to your branches
